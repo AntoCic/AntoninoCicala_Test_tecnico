@@ -9,6 +9,7 @@ export default class FileReader {
                 if (err) {
                     return reject(err);
                 }
+                fs.unlinkSync(path.resolve(filePath));
                 resolve(data);
             });
         });

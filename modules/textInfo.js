@@ -3,7 +3,7 @@ export default class TextInfo {
     numWords(text = "") {
         text = text.replace(/[^a-zA-Z ]/g, "");
         text = text.replace(/\s+/g, ' ')
-        const words = text.split(" ");
+        const words = text.trim().split(" ");
         return words.length
     }
     // function to get number of totals letters
@@ -21,9 +21,9 @@ export default class TextInfo {
     // if the number of occurrences is up to quantity 
     // quantity default is 10
     numRecurringWords(text = "", quantity = 10) {
-        text = text.replace(/\s+/g, ' ')
         text = text.replace(/[^a-zA-Z ]/g, "");
-        const words = text.split(" ");
+        text = text.replace(/\s+/g, ' ')
+        const words = text.trim().split(" ");
 
         let wordsObject = {}
         words.forEach(element => {
