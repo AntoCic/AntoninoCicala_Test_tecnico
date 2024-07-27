@@ -36,7 +36,7 @@ Il progetto utilizza il pattern di design Facade per gestire la logica di elabor
 
 ## Avvio del Server
 Per avviare il server, eseguire il comando:
-> ATTENZIONE il server inizializzato nella porta 3000
+> ATTENZIONE: il server inizializzato nella porta 3000
 ```sh
 npm start
 ```
@@ -64,7 +64,7 @@ form.addEventListener('submit', (event) => {
 });
 ```
 
-Le funzioni di `fetch` gestiscono due casi distinti: 
+Le funzioni di fetch gestiscono due casi distinti: 
 - nel caso di un caricamento locale, viene inviato l'intero form per essere elaborato dal server;
 - nel caso di un caricamento esterno da un URL web, viene inviato solo l'URL, incapsulato in un oggetto con una variabile denominata `fileUrl`.
 
