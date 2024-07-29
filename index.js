@@ -11,6 +11,10 @@ const upload = multer({ dest: 'uploads/' });
 // Initializing fileProcessor with the class FileFacade
 const fileProcessor = new FileFacade();
 
+app.get('/', (req, res) => {
+    res.sendFile('index.html', { root: __dirname + '/public' })
+});
+
 // Route to manage file upload
 app.post('/uploadfile', upload.single('filetxt'), async (req, res) => {
     // process local file path
